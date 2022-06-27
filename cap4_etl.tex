@@ -1,0 +1,37 @@
+\section{ETL}
+
+Questi strumenti hanno un ruolo fondamentale nell’architettura di DW perché innanzitutto sono garanti delle qualità e poi perché sono quelli che popolano il data werahouse. L’ETL in presenza di un database riconciliato, quindi di un ODS, avviene in due step.Il primo si occupa di estrarre dal database sorgente, trasformare e caricare sull’ODS. Il secondo, invece, si occupa di prendere i dati dall’ODS e metterli sul data mart. Evidentemente ci sono due modalità per lanciare l’ETL. La prima è quella che si lancia quando il sistema di DW entra in produzione,ovvero quando viene popolato con informazioni per la prima volta. L’altra modalità avviene periodicamente. 
+
+L’ETL può essere implementato in due modi: lo si può scrivere come se fosse una procedura o lo si può realizzare usando uno strumento commerciale. Nel primo caso il vantaggio è avere un controllo perfetto su quello che sta succedendo e su come gestisco la procedura. Tale metodo è lungo e complesso da scrivere ed è altrettanto complesso da documentare e mantenere. Utilizzare gli strumenti commerciali permette di avere un ambiente, al cui interno, in modalità grafica posso disegnare i flussi per l’ETL. Tutto questo per ottenere tempi ridotti per la costruzione dell’ETL e un minor sforzo per fare la documentazione. In ogni caso le query, o le procedure di pulizia vanno comunque scritte. Un buon ETL vuol dire aver trovato la maggior parte degli errori e correggerne qualcuno. Non sempre però è possibile correggere in automatico gli errori. 
+\subsection{Estrazione}
+Bisogna estrarre dalle sorgenti dati tutto ciò che serve per essere rielaborato e aggiunto dentro al DW. L’estrazione può essere fatta in due modi:
+\begin{itemize}
+	\item 
+	\textbf{Estrazione statica}: viene effettuata quando il DW deve essere popolato per la prima volta e consiste in una fotografia dei dati operazionali
+	\item 
+	\textbf{Estrazione incrementale}: l’idea è quella di estrarre dal database sorgente solo quello che è cambiato rispetto all’ultima estrazione. L’estrazione incrementale ha qualche complessità in più rispetto all’estrazione statica. 
+\end{itemize}
+\subsection{Pulitura}
+Si intende tutte le modifiche che si fanno al valore dei dati con l’obiettivo di correggere gli errori e quindi migliorare la qualità del dato. Esistono errori di diversa natura, in molti casi, legati ad un insufficiente controllo di input:
+\begin{itemize}
+	\item
+	\textbf{Dati duplicati}: per certi pazienti mi ritrovo più record distinti. Inconsistenza tra valori logicamente associati
+	\item
+	\textbf{Dati mancanti}: chi compila un’anagrafica richiede solo i dati obbligatori; quindi, successivamente mi ritrovo dei NULL
+	\item
+	\textbf{Uso non previsto di un campo}: campi di tipo note o commenti dove un utente potrebbe scrivere dei dati che sono importanti per il processo decisionale
+	\item
+	\textbf{Valori impossibili o errati}: esempio nome di un comune che non esiste
+	\item 	
+	\textbf{Valori inconsistenti per la stessa entità dovuti a errori di battitura}: utente che compare in due database ma con codice fiscale differente
+\end{itemize}
+\subsection{Trasformazione}
+Lavora sul formato dei dati, con l’obiettivo di riportare tutti i dati ad un unico standard di rappresentazione. Per poter riconciliare i database bisogna imporre un unico standard. La trasformazione viene fatta a valle e a monte dell’ODS. A monte, sui dati estratti dai DB operazionali per poi caricarli sull’ODS. Quello che si deve fare è standardizzare, normalizzare, matching e selezione, perché magari certi campi non sono d’interesse per il DW. L’altra parte di ETL prevede una denormalizzazione e l’introduzione di aggregazione, eliminando magari il dettaglio più fine di granularità del dato che non sia importante per il processo di supporto decisionale, quindi effettuando sintesi. (esempio slide pag. 36)
+\subsection{Caricamento}
+Simmetricamente a quello fatto in estrazione, il caricamento dei dati lo posso fare in due modi:
+\begin{itemize}
+	\item 
+	\textbf{Refresh}: riscrivo tutto 
+	\item 
+	\textbf{Update}: aggiungo la nuova fotografia a quelle precedenti, aggiungendo una nuova fetta di dati
+\end{itemize}

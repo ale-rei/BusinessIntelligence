@@ -1,0 +1,41 @@
+
+\section{Progettazione Concettuale}
+Questa fase è di cruciale importanza poiché definisce il contenuto informativo del data mart. Tutta la prima parte di questa fase si occupa di capire qual è il modello che viene utilizzato, quindi individuare i vari costrutti che si potranno utilizzare. Non vi è uno standard ufficiale per la realizzazione della parte di progettazione concettuale del data mart. È possibile utilizzare il modello E-R per il data mart? No, perché è troppo espressivo e perché è nato per modellare realtà di business fatte in qualunque modo. Qui il modello deve essere multidimensionale e bisogna rispettare dei vincoli; quindi, ci devono essere gerarchie progettate in un certo modo. Molti progettisti disegnano direttamente gli schemi a stella (schemi logici relazionali). Questo tipo di approccio non è conveniente e funziona male perché racchiude solo la definizione di un insieme di relazioni e di vincoli di integrità (sono denormalizzate in pratica). 
+
+Il formalismo che bisogna utilizzare si chiama \textbf{Dimensional Fact Model (DFM}). Ha una larga diffusione nei contesti italiani ed esteri, ma soprattutto nel mondo della ricerca. È un modello concettuale grafico pensato per:
+\begin{itemize}
+	\item 
+	Supportare efficacemente il progetto concettuale
+	\item 
+	Permette di verificare che le interrogazioni (query OLAP) siano effettivamente esprimibili sul cubo che stiamo disegnando 
+	\item 
+	Supportare un dialogo tra progettista e utente finale
+	\item 
+	È fondamentale per la documentazione che deve essere espressiva e non ambigua
+	\item 
+	Creare una piattaforma stabile da cui partire per il progetto logico
+\end{itemize}
+
+Quando si utilizza il \textbf{DFM} creiamo degli schemi detti schemi di fatto. Trattandosi di schemi multidimensionali, ovviamente, disegneremo fatti, misure e gerarchie. Distingueremo la parte del DFM in costrutti di base e costrutti avanzati. I primi coprono un pò di più dell’espressività del modello multidimensionale. I secondi, invece, servono per modellare le sfumature che si incontrano nei progetti reali. 
+\subsection{I costrutti di base}
+\begin{itemize}
+	\item
+	\textbf{Fatto}: è un fenomeno di business che accade dinamicamente all’interno dell’azienda. È essenziale che un fatto abbia aspetti dinamici, ovvero evolva nel tempo
+	\item 
+	\textbf{Dimensione}: attributi numerici che quantificano il fatto da un certo punto di vista (il voto di laurea, qtà acquistata)
+	\item 
+	\textbf{Misura}: coordinate di accesso al cubo. 
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/example_fatto}
+	\caption{Esempio di ...}
+	\label{fig:exfatto}
+\end{figure}
+Quindi il tipo di relazione che ho tra prodotto, data e negozio è una classica associazione molti a molti. Dunque, un \textbf{fatto} esprime una associazione molti a molti tra le dimensioni.
+
+Una \textbf{gerarchia} è una sequenza di attributi collegati tra di loro da associazioni molti ad uno, ossia da dipendenze funzionali. Le gerarchie non sono necessariamente dei percorsi, ma possono avere forme più complesse. In particolare possono essere degli alberi, i cui nodi si chiamano attributi dimensionali, i quali descrivono le dimensioni in modo via via più aggregato. L’\textbf{albero} non orientato è un grafo aciclico. In quest' albero la radice è la dimensione, mentre gli archi rappresentano dipendenze funzionali. 
+
+Un \textbf{evento primario} è una particolare occorrenza di un fatto, individuata da una ennupla costituita da un valore per ciascuna dimensione. A ciascun evento primario è associato un valore per ciascuna misura. Per modellare il concetto dell’aggregazione sul DFM si ragiona in termini di group-by-set (livello di aggregazione) e di conseguenza aggrego (la sparsità diminuisce) nella query gli eventi primari in eventi secondari. Tanti eventi primari contribuiscono a costruire un evento secondario.  
+
+Dato un DFM qualsiasi, in qualunque modo si scelga un sottoinsieme di attributi dimensionali, a patto che non ci siano dipendenze funzionali, ho un possibile group-by-set. 
