@@ -30,3 +30,5 @@
 \contentsline {subsubsection}{\numberline {6.2.4}Il carico di lavoro}{27}{}%
 \contentsline {section}{\numberline {7}Progettazione Concettuale}{27}{}%
 \contentsline {subsection}{\numberline {7.1}I costrutti di base}{28}{}%
+\contentsline {subsection}{\numberline {7.2}I costrutti avanzati}{29}{}%
+\contentsline {subsection}{\numberline {7.3}Editing dell'albero}{31}{}%

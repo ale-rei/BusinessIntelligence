@@ -39,3 +39,59 @@ Una \textbf{gerarchia} è una sequenza di attributi collegati tra di loro da ass
 Un \textbf{evento primario} è una particolare occorrenza di un fatto, individuata da una ennupla costituita da un valore per ciascuna dimensione. A ciascun evento primario è associato un valore per ciascuna misura. Per modellare il concetto dell’aggregazione sul DFM si ragiona in termini di group-by-set (livello di aggregazione) e di conseguenza aggrego (la sparsità diminuisce) nella query gli eventi primari in eventi secondari. Tanti eventi primari contribuiscono a costruire un evento secondario.  
 
 Dato un DFM qualsiasi, in qualunque modo si scelga un sottoinsieme di attributi dimensionali, a patto che non ci siano dipendenze funzionali, ho un possibile group-by-set. 
+
+\subsection{I costrutti avanzati}
+\begin{itemize}
+	\item 
+	\textbf{Attributo descrittivo}: aggiunge delle informazioni su un attributo dimensionale, a cui è connesso da una associazione uno-a-uno. Questo tipo di attributi possono essere utilizzati per la selezione ma non possono essere utilizzati per l’aggregazione (non possono finire dentro ad un group-by-set). Gli attributi descrittivi non hanno figli. Posso discretizzare gli attributi descrittivi trasformandoli in un attributo dimensionale.  
+	\item 
+	\textbf{Archi opzionali}: è un arco molti-ad-uno ma entra in gioco la cardinalità minima. Con l’arco opzionale dico che per alcuni valori del padre non è definito nessun valore del figlio. 
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{img/descrittivo}
+		\caption{Attributo descrittivo e arco opzionale}
+		\label{fig:descr}
+	\end{figure}
+	\item 
+	\textbf{Gerarchia condivisa}: in realtà le gerarchie possono avere dei cicli. Ho quattro modi per creare dei cicli nelle gerarchie del DFM, con quattro significati diversi. Il primo modo è la gerarchia condivisa, che è quello più debole, perché non pone vincoli sulle istanze. Una gerarchia condivisa è un albero che viene usato due o più volte all’interno dello stesso schema di fatto.
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{img/condivisa}
+		\caption{Gerarchia condivisa}
+		\label{fig:condivisa}
+	\end{figure}
+	\item 
+	\textbf{Convergenza}: aggiungo un vincolo sulle istanze. Mentre nel caso della condivisione non pongo vincoli sulle istanze, nel caso della convergenza non solo ho più percorsi che partono da un punto e arrivano nell’altro punto, ma qualunque dei due percorsi io prenda per ogni valore del punto di partenza arrivo sempre nello stesso punto di arrivo. Ho un vincolo aggiuntivo sulle istanze. 
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.6\linewidth]{img/convergenza}
+		\caption{Convergenza}
+		\label{fig:conv}
+	\end{figure}
+	\item 
+	\textbf{Gerarchia incompleta}: per alcune istanze della gerarchia mancano dei valori di alcuni valori intermedi. La particolarità della gerarchia incompleta è che si hanno per le diverse istanze della gerarchia, un numero variabili di livelli pieni. 
+		\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7\linewidth]{img/incompleta}
+		\caption{Gerarchia incompleta}
+		\label{fig:incompleta}
+	\end{figure}
+	\item 
+	\textbf{Additività}: esprime in che modo le misure possono essere aggregate. Di per sé le misure sono classificabili in tre categorie:
+	\begin{itemize}
+		\item 
+		\textbf{Misure di flusso}: si riferiscono ad un periodo di tempo e vengono istanziate in modo cumulativo (il numero di prodotti venduti in un giorno, l’incasso mensile, il numero di nati in un anno). Sono quelle più semplice da gestire perché sono additive lungo tutte le dimensioni.
+		\item 
+		\textbf{Misure di livello}: vengono valutate in istanti di tempo (il numero di prodotti in inventario, il numero di abitanti di una città)
+	\end{itemize}
+	\item 
+	\textbf{Misure unitarie}: vengono valutate in particolari istanti di tempo, ma sono espresse in termini relativi (il prezzo unitario di un prodotto, la percentuale di scoto, il cambio di una valuta) 
+	
+	La misura è detta \textbf{additiva} lungo una dimensione se i suoi valori possono essere aggregati lungo la corrispondente gerarchia tramite l’operatore di somma, altrimenti è detta non-additiva. Una misura \textbf{non-additiva} è non-aggregabile se nessun operatore di aggregazione può essere usato su di essa.  
+	
+	Uno schema di fatto si dice \textbf{vuoto} se non ha misure. In questo caso, il fatto registra solo il verificarsi di un evento.
+	
+	\subsection{Editing dell'albero}
+	 
+	
+\end{itemize}
