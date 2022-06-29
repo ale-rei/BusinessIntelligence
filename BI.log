@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.21)  28 JUN 2022 10:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.6.21)  29 JUN 2022 15:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -202,63 +202,62 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 4.
-)
+ [1
+
+{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}])
 \tf@toc=\write4
 \openout4 = `BI.toc'.
 
- [1
-
-{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./BI.l
-of)
+ [2] (./BI.lof)
 \tf@lof=\write5
 \openout5 = `BI.lof'.
 
- [2] (./cap1_BI.tex
-<img/Cursor_e_2-IntroDW_pdf.png, id=14, 393.47pt x 158.5925pt>
+ [3] (./cap1_BI.tex
+<img/Cursor_e_2-IntroDW_pdf.png, id=17, 393.47pt x 158.5925pt>
 File: img/Cursor_e_2-IntroDW_pdf.png Graphic file (type png)
 <use img/Cursor_e_2-IntroDW_pdf.png>
 Package pdftex.def Info: img/Cursor_e_2-IntroDW_pdf.png  used on input line 7.
 (pdftex.def)             Requested size: 407.66833pt x 164.3152pt.
-<img/portafoglio.png, id=16, 422.57875pt x 279.54437pt>
+<img/portafoglio.png, id=19, 422.57875pt x 279.54437pt>
 File: img/portafoglio.png Graphic file (type png)
 <use img/portafoglio.png>
 Package pdftex.def Info: img/portafoglio.png  used on input line 16.
 (pdftex.def)             Requested size: 317.07614pt x 209.75586pt.
- [3 <./img/Cursor_e_2-IntroDW_pdf.png>]
-[4 <./img/portafoglio.png>]
-<img/piramide.png, id=26, 304.5195pt x 199.071pt>
+ [4 <./img/Cursor_e_2-IntroDW_pdf.png>]
+[5 <./img/portafoglio.png>]
+<img/piramide.png, id=29, 304.5195pt x 199.071pt>
 File: img/piramide.png Graphic file (type png)
 <use img/piramide.png>
 Package pdftex.def Info: img/piramide.png  used on input line 71.
 (pdftex.def)             Requested size: 317.07614pt x 207.29016pt.
- [5 <./img/piramide.png>])
-(./cap2_DataWerahousing.tex [6]
-<img/DW.png, id=36, 182.6825pt x 101.37875pt>
+ [6 <./img/piramide.png>])
+(./cap2_DataWerahousing.tex [7]
+<img/DW.png, id=40, 182.6825pt x 101.37875pt>
 File: img/DW.png Graphic file (type png)
 <use img/DW.png>
 Package pdftex.def Info: img/DW.png  used on input line 14.
 (pdftex.def)             Requested size: 317.07614pt x 175.98456pt.
- [7 <./img/DW.png>]) (./cap3_datawerahouse.tex
-<img/SubjO.png, id=42, 231.264pt x 148.482pt>
+ [8 <./img/DW.png>]) (./cap3_datawerahouse.tex
+<img/SubjO.png, id=45, 231.264pt x 148.482pt>
 File: img/SubjO.png Graphic file (type png)
 <use img/SubjO.png>
 Package pdftex.def Info: img/SubjO.png  used on input line 8.
 (pdftex.def)             Requested size: 317.07614pt x 203.589pt.
 
-[8]
-<img/DBeDW.png, id=46, 316.68312pt x 168.12813pt>
+[9]
+<img/DBeDW.png, id=49, 316.68312pt x 168.12813pt>
 File: img/DBeDW.png Graphic file (type png)
 <use img/DBeDW.png>
 Package pdftex.def Info: img/DBeDW.png  used on input line 24.
 (pdftex.def)             Requested size: 407.66833pt x 216.45004pt.
- [9 <./img/SubjO.png>]
-<img/arch1.png, id=51, 228.636pt x 149.4675pt>
+ [10 <./img/SubjO.png>]
+<img/arch1.png, id=54, 228.636pt x 149.4675pt>
 File: img/arch1.png Graphic file (type png)
 <use img/arch1.png>
 Package pdftex.def Info: img/arch1.png  used on input line 48.
 (pdftex.def)             Requested size: 271.7835pt x 177.68149pt.
- [10 <./img/DBeDW.png>]
-<img/arch2.png, id=56, 201.699pt x 196.443pt>
+ [11 <./img/DBeDW.png>]
+<img/arch2.png, id=59, 201.699pt x 196.443pt>
 File: img/arch2.png Graphic file (type png)
 <use img/arch2.png>
 Package pdftex.def Info: img/arch2.png  used on input line 56.
@@ -268,141 +267,147 @@ Underfull \hbox (badness 10000) in paragraph at lines 61--62
 
  []
 
-[11 <./img/arch1.png> <./img/arch2.png>]
-<img/DMind.png, id=62, 428.60126pt x 330.23375pt>
+[12 <./img/arch1.png> <./img/arch2.png>]
+<img/DMind.png, id=65, 428.60126pt x 330.23375pt>
 File: img/DMind.png Graphic file (type png)
 <use img/DMind.png>
 Package pdftex.def Info: img/DMind.png  used on input line 69.
 (pdftex.def)             Requested size: 226.48395pt x 174.50403pt.
-<img/DMcon.png, id=63, 461.725pt x 338.26375pt>
+<img/DMcon.png, id=66, 461.725pt x 338.26375pt>
 File: img/DMcon.png Graphic file (type png)
 <use img/DMcon.png>
 Package pdftex.def Info: img/DMcon.png  used on input line 77.
 (pdftex.def)             Requested size: 226.48395pt x 165.921pt.
- [12 <./img/DMind.png>]
+ [13 <./img/DMind.png>]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 82.
-<img/hubandspoke.png, id=67, 325.215pt x 445.665pt>
+<img/hubandspoke.png, id=71, 325.215pt x 445.665pt>
 File: img/hubandspoke.png Graphic file (type png)
 <use img/hubandspoke.png>
 Package pdftex.def Info: img/hubandspoke.png  used on input line 85.
 (pdftex.def)             Requested size: 90.5922pt x 124.13931pt.
-<img/fede.png, id=68, 601.24625pt x 393.47pt>
+<img/fede.png, id=72, 601.24625pt x 393.47pt>
 File: img/fede.png Graphic file (type png)
 <use img/fede.png>
 Package pdftex.def Info: img/fede.png  used on input line 93.
 (pdftex.def)             Requested size: 317.07614pt x 207.50543pt.
- [13 <./img/DMcon.png> <./img/hubandspoke.png>]) (./cap4_etl.tex [14 <./img/fed
-e.png>] [15])
+ [14 <./img/DMcon.png> <./img/hubandspoke.png>]) (./cap4_etl.tex [15 <./img/fed
+e.png>] [16])
 (./cap5_modellomult.tex
-<img/example.png, id=82, 483.8075pt x 307.1475pt>
+<img/example.png, id=85, 483.8075pt x 307.1475pt>
 File: img/example.png Graphic file (type png)
 <use img/example.png>
 Package pdftex.def Info: img/example.png  used on input line 6.
 (pdftex.def)             Requested size: 317.07614pt x 201.30728pt.
- [16]
+ [17]
 Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-<img/slicing&dicing.png, id=86, 721.69624pt x 465.74pt>
+<img/slicing&dicing.png, id=89, 721.69624pt x 465.74pt>
 File: img/slicing&dicing.png Graphic file (type png)
 <use img/slicing&dicing.png>
 Package pdftex.def Info: img/slicing&dicing.png  used on input line 24.
 (pdftex.def)             Requested size: 226.48395pt x 146.15456pt.
-[17 <./img/example.png> <./img/slicing&dicing.png>]
-<img/gran.png, id=93, 483.8075pt x 324.21124pt>
+[18 <./img/example.png> <./img/slicing&dicing.png>]
+<img/gran.png, id=96, 483.8075pt x 324.21124pt>
 File: img/gran.png Graphic file (type png)
 <use img/gran.png>
 Package pdftex.def Info: img/gran.png  used on input line 34.
 (pdftex.def)             Requested size: 271.7835pt x 182.13586pt.
- [18 <./img/gran.png>]
-<img/rolap.png, id=98, 483.8075pt x 182.6825pt>
+ [19 <./img/gran.png>]
+<img/rolap.png, id=102, 483.8075pt x 182.6825pt>
 File: img/rolap.png Graphic file (type png)
 <use img/rolap.png>
 Package pdftex.def Info: img/rolap.png  used on input line 68.
 (pdftex.def)             Requested size: 317.07614pt x 119.73177pt.
 
-[19 <./img/rolap.png>]) (./cap6_ciclodivita.tex [20]
-<img/cicloDW.png, id=107, 378.41376pt x 369.38pt>
+[20 <./img/rolap.png>]) (./cap6_ciclodivita.tex [21]
+<img/cicloDW.png, id=110, 378.41376pt x 369.38pt>
 File: img/cicloDW.png Graphic file (type png)
 <use img/cicloDW.png>
 Package pdftex.def Info: img/cicloDW.png  used on input line 26.
 (pdftex.def)             Requested size: 226.48395pt x 221.07735pt.
- [21] [22 <./img/cicloDW.png>]
-<img/supply-driven.png, id=115, 786.94pt x 578.16pt>
+ [22] [23 <./img/cicloDW.png>]
+<img/supply-driven.png, id=118, 786.94pt x 578.16pt>
 File: img/supply-driven.png Graphic file (type png)
 <use img/supply-driven.png>
 Package pdftex.def Info: img/supply-driven.png  used on input line 69.
 (pdftex.def)             Requested size: 317.07614pt x 232.95372pt.
- [23]
+ [24]
 Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
-[24 <./img/supply-driven.png>]
-<img/analisi.png, id=122, 640.3925pt x 496.85625pt>
+[25 <./img/supply-driven.png>]
+<img/analisi.png, id=126, 640.3925pt x 496.85625pt>
 File: img/analisi.png Graphic file (type png)
 <use img/analisi.png>
 Package pdftex.def Info: img/analisi.png  used on input line 118.
 (pdftex.def)             Requested size: 317.07614pt x 246.00903pt.
- [25] [26 <./img/analisi.png>])
-(./cap7_progconcettuale.tex [27]
-<img/example_fatto.png, id=133, 344.28625pt x 255.95625pt>
+ [26] [27 <./img/analisi.png>])
+(./cap7_progconcettuale.tex [28]
+<img/example_fatto.png, id=136, 344.28625pt x 255.95625pt>
 File: img/example_fatto.png Graphic file (type png)
 <use img/example_fatto.png>
 Package pdftex.def Info: img/example_fatto.png  used on input line 31.
 (pdftex.def)             Requested size: 317.07614pt x 235.72864pt.
- [28 <./img/example_fatto.png>]
-<img/descrittivo.png, id=138, 553.56813pt x 458.71375pt>
+ [29 <./img/example_fatto.png>]
+<img/descrittivo.png, id=141, 553.56813pt x 458.71375pt>
 File: img/descrittivo.png Graphic file (type png)
 <use img/descrittivo.png>
 Package pdftex.def Info: img/descrittivo.png  used on input line 51.
 (pdftex.def)             Requested size: 271.7835pt x 225.21266pt.
-<img/condivisa.png, id=139, 544.0325pt x 355.3275pt>
+<img/condivisa.png, id=142, 544.0325pt x 355.3275pt>
 File: img/condivisa.png Graphic file (type png)
 <use img/condivisa.png>
 Package pdftex.def Info: img/condivisa.png  used on input line 59.
 (pdftex.def)             Requested size: 271.7835pt x 177.5169pt.
- [29 <./img/descrittivo.png>]
-<img/convergenza.png, id=143, 571.13374pt x 485.815pt>
+ [30 <./img/descrittivo.png>]
+<img/convergenza.png, id=146, 571.13374pt x 485.815pt>
 File: img/convergenza.png Graphic file (type png)
 <use img/convergenza.png>
 Package pdftex.def Info: img/convergenza.png  used on input line 67.
 (pdftex.def)             Requested size: 271.7835pt x 231.17964pt.
-<img/incompleta.png, id=144, 710.655pt x 216.81pt>
+<img/incompleta.png, id=147, 710.655pt x 216.81pt>
 File: img/incompleta.png Graphic file (type png)
 <use img/incompleta.png>
 Package pdftex.def Info: img/incompleta.png  used on input line 75.
 (pdftex.def)             Requested size: 317.07614pt x 96.73653pt.
- [30 <./img/condivisa.png> <./img/convergenza.png>]) [31 <./img/incompleta.png>
-] (./BI.aux) ) 
+ [31 <./img/condivisa.png> <./img/convergenza.png>]
+<img/editing.png, id=152, 483.8075pt x 105.39375pt>
+File: img/editing.png Graphic file (type png)
+<use img/editing.png>
+Package pdftex.def Info: img/editing.png  used on input line 114.
+(pdftex.def)             Requested size: 271.7835pt x 59.20824pt.
+ [32 <./img/incompleta.png>] [33 <./img/editing.png>]) (./cap8_proglogica.tex) 
+[34] (./BI.aux) ) 
 Here is how much of TeX's memory you used:
- 3856 strings out of 478268
- 61399 string characters out of 5846347
- 378447 words of memory out of 5000000
- 22000 multiletter control sequences out of 15000+600000
+ 3873 strings out of 478268
+ 61725 string characters out of 5846347
+ 377458 words of memory out of 5000000
+ 22013 multiletter control sequences out of 15000+600000
  481624 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,8n,62p,1524b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-s
-uper-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-sup
-er-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.
-pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pf
-b></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb>
-</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></
-usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on BI.pdf (31 pages, 2637788 bytes).
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/c
+m-super-t1.enc}{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-
+super-ts1.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx12
+00.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1440
+.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.p
+fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb
+></usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><
+/usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr
+/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/loc
+al/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on BI.pdf (34 pages, 2663339 bytes).
 PDF statistics:
- 208 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 219 PDF objects out of 1000 (max. 8388607)
+ 117 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,34 +1,38 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {section}{\numberline {1}La Business Intelligence}{3}{}%
-\contentsline {subsection}{\numberline {1.1}La piramide della BI}{5}{}%
-\contentsline {section}{\numberline {2}Il Data Warehousing}{6}{}%
-\contentsline {subsection}{\numberline {2.1}Caratteristiche del processo di Data Warehosuing}{8}{}%
-\contentsline {section}{\numberline {3}Il Data Werahouse}{8}{}%
-\contentsline {subsection}{\numberline {3.1}Architetture di Data Werahouse}{10}{}%
-\contentsline {subsubsection}{\numberline {3.1.1}I requisiti}{10}{}%
-\contentsline {subsubsection}{\numberline {3.1.2}Classificazione}{10}{}%
-\contentsline {subsubsection}{\numberline {3.1.3}Fattori di scelta dell'architettura}{14}{}%
-\contentsline {section}{\numberline {4}ETL}{14}{}%
-\contentsline {subsection}{\numberline {4.1}Estrazione}{15}{}%
-\contentsline {subsection}{\numberline {4.2}Pulitura}{15}{}%
-\contentsline {subsection}{\numberline {4.3}Trasformazione}{16}{}%
-\contentsline {subsection}{\numberline {4.4}Caricamento}{16}{}%
-\contentsline {section}{\numberline {5}Il modello multidimensionale}{16}{}%
-\contentsline {subsection}{\numberline {5.1}Analisi dei dati}{18}{}%
-\contentsline {subsubsection}{\numberline {5.1.1}Gli operatori OLAP}{18}{}%
-\contentsline {subsection}{\numberline {5.2}Implementazione Data Werahouse}{19}{}%
-\contentsline {subsection}{\numberline {5.3}Qualità e Sicurezza}{20}{}%
-\contentsline {section}{\numberline {6}Il ciclo di vita del Data Warehouse}{21}{}%
-\contentsline {subsection}{\numberline {6.1}Progettazione del data mart}{22}{}%
-\contentsline {subsubsection}{\numberline {6.1.1}Supply-Driven}{23}{}%
-\contentsline {subsubsection}{\numberline {6.1.2}Demand-Driven}{24}{}%
-\contentsline {subsection}{\numberline {6.2}Fasi di progettazione del data mart}{25}{}%
-\contentsline {subsubsection}{\numberline {6.2.1}Analisi e riconciliazione delle sorgenti}{25}{}%
-\contentsline {subsubsection}{\numberline {6.2.2}Ricognizione e Normalizzazione}{26}{}%
-\contentsline {subsubsection}{\numberline {6.2.3}Analisi dei requisiti}{26}{}%
-\contentsline {subsubsection}{\numberline {6.2.4}Il carico di lavoro}{27}{}%
-\contentsline {section}{\numberline {7}Progettazione Concettuale}{27}{}%
-\contentsline {subsection}{\numberline {7.1}I costrutti di base}{28}{}%
-\contentsline {subsection}{\numberline {7.2}I costrutti avanzati}{29}{}%
-\contentsline {subsection}{\numberline {7.3}Editing dell'albero}{31}{}%
+\contentsline {section}{\numberline {1}La Business Intelligence}{4}{}%
+\contentsline {subsection}{\numberline {1.1}La piramide della BI}{6}{}%
+\contentsline {section}{\numberline {2}Il Data Warehousing}{7}{}%
+\contentsline {subsection}{\numberline {2.1}Caratteristiche del processo di Data Warehosuing}{9}{}%
+\contentsline {section}{\numberline {3}Il Data Werahouse}{9}{}%
+\contentsline {subsection}{\numberline {3.1}Architetture di Data Werahouse}{11}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}I requisiti}{11}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Classificazione}{11}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}Fattori di scelta dell'architettura}{15}{}%
+\contentsline {section}{\numberline {4}ETL}{15}{}%
+\contentsline {subsection}{\numberline {4.1}Estrazione}{16}{}%
+\contentsline {subsection}{\numberline {4.2}Pulitura}{16}{}%
+\contentsline {subsection}{\numberline {4.3}Trasformazione}{17}{}%
+\contentsline {subsection}{\numberline {4.4}Caricamento}{17}{}%
+\contentsline {section}{\numberline {5}Il modello multidimensionale}{17}{}%
+\contentsline {subsection}{\numberline {5.1}Analisi dei dati}{19}{}%
+\contentsline {subsubsection}{\numberline {5.1.1}Gli operatori OLAP}{19}{}%
+\contentsline {subsection}{\numberline {5.2}Implementazione Data Werahouse}{20}{}%
+\contentsline {subsection}{\numberline {5.3}Qualità e Sicurezza}{21}{}%
+\contentsline {section}{\numberline {6}Il ciclo di vita del Data Warehouse}{22}{}%
+\contentsline {subsection}{\numberline {6.1}Progettazione del data mart}{23}{}%
+\contentsline {subsubsection}{\numberline {6.1.1}Supply-Driven}{24}{}%
+\contentsline {subsubsection}{\numberline {6.1.2}Demand-Driven}{25}{}%
+\contentsline {subsection}{\numberline {6.2}Fasi di progettazione del data mart}{26}{}%
+\contentsline {subsubsection}{\numberline {6.2.1}Analisi e riconciliazione delle sorgenti}{26}{}%
+\contentsline {subsubsection}{\numberline {6.2.2}Ricognizione e Normalizzazione}{27}{}%
+\contentsline {subsubsection}{\numberline {6.2.3}Analisi dei requisiti}{27}{}%
+\contentsline {subsubsection}{\numberline {6.2.4}Il carico di lavoro}{28}{}%
+\contentsline {section}{\numberline {7}Progettazione Concettuale}{28}{}%
+\contentsline {subsection}{\numberline {7.1}I costrutti di base}{29}{}%
+\contentsline {subsection}{\numberline {7.2}I costrutti avanzati}{30}{}%
+\contentsline {subsection}{\numberline {7.3}Editing dell'albero}{32}{}%
+\contentsline {subsection}{\numberline {7.4}Scelta delle dimensioni}{33}{}%
+\contentsline {subsection}{\numberline {7.5}Scelta delle misure}{33}{}%
+\contentsline {subsection}{\numberline {7.6}Creazione dello schema di fatto}{33}{}%
+\contentsline {subsection}{\numberline {7.7}Carico di lavoro e volume dati}{34}{}%
