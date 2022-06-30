@@ -36,3 +36,6 @@
 \contentsline {subsection}{\numberline {7.5}Scelta delle misure}{33}{}%
 \contentsline {subsection}{\numberline {7.6}Creazione dello schema di fatto}{33}{}%
 \contentsline {subsection}{\numberline {7.7}Carico di lavoro e volume dati}{34}{}%
+\contentsline {section}{\numberline {8}Progettazione Logica}{35}{}%
+\contentsline {subsection}{\numberline {8.1}Modelli logici per il data mart}{35}{}%
+\contentsline {subsection}{\numberline {8.2}Le viste}{36}{}%

@@ -1,4 +1,3 @@
-
 \section{Progettazione Concettuale}
 Questa fase è di cruciale importanza poiché definisce il contenuto informativo del data mart. Tutta la prima parte di questa fase si occupa di capire qual è il modello che viene utilizzato, quindi individuare i vari costrutti che si potranno utilizzare. Non vi è uno standard ufficiale per la realizzazione della parte di progettazione concettuale del data mart. È possibile utilizzare il modello E-R per il data mart? No, perché è troppo espressivo e perché è nato per modellare realtà di business fatte in qualunque modo. Qui il modello deve essere multidimensionale e bisogna rispettare dei vincoli; quindi, ci devono essere gerarchie progettate in un certo modo. Molti progettisti disegnano direttamente gli schemi a stella (schemi logici relazionali). Questo tipo di approccio non è conveniente e funziona male perché racchiude solo la definizione di un insieme di relazioni e di vincoli di integrità (sono denormalizzate in pratica). 
 
@@ -121,7 +120,7 @@ Dato un DFM qualsiasi, in qualunque modo si scelga un sottoinsieme di attributi 
 	 	\item 
 	 	può capitare che dentro l’albero ci finiscano degli archi che rappresentano dei casi particolari di associazioni molti a uno, ovvero associazioni uno-a-uno. Questo può succedere in più situazioni: se partiamo da un E/R in cui abbiamo gerarchie di specializzazione, la gerarchia da luogo ad associazioni binarie uno-a-uno. Nell’E/R di partenza può capitare che si abbia già un’associazione uno-a-uno (esempio iscritto e tessera in palestra). Dentro il DFM non si possono avere archi tra due attributi dimensionali che rappresentano associazioni uno-a-uno, ma sempre molti-a-uno. 
 	 	
-	 	In presenza di un’associazione uno-a-uno sono consigliabili due soluzioni:
+	 	In presenza di un’associazione uno-a-uno vi sono due soluzioni:
 	 	\begin{itemize}
 	 		\item 
 	 		quando il vertice v determinato dall’associazione uno-a-uno ha dei discendenti di interesse lo si può eliminare dall’albero tramite innesto
@@ -134,7 +133,7 @@ Dato un DFM qualsiasi, in qualunque modo si scelga un sottoinsieme di attributi 
 	 \end{itemize}
  
  \subsection{Scelta delle dimensioni}
- Le \textbf{dimensioni} vanno scelte tra i figli diretti della radice e devono corrispondere ad attributi che abbiamo un dominio finito e discreto. La loro scelta è cruciale per il progetto poiché definisce la granularità degli eventi primari. 
+ Le \textbf{dimensioni} vanno scelte tra i figli diretti della radice e devono corrispondere ad attributi che abbiano un dominio finito e discreto. La loro scelta è cruciale per il progetto poiché definisce la granularità degli eventi primari. 
 \subsection{Scelta delle misure}
 Le \textbf{misure} sono i figli diretti della radice che non abbiamo scelto come dimensioni. Sono sempre attributi numerici (reali o interi). 
 \subsection{Creazione dello schema di fatto} 
@@ -161,7 +160,7 @@ L’albero degli attributi può essere tradotto in uno schema di fatto che inclu
 \subsection{Carico di lavoro e volume dati}
 Per il data mart si hanno diversi schemi di fatto che mostrano il contenuto informativo del data mart dal punto di vista concettuale indipendente dall’implementazione. Il prossimo passo sarà tradurre gli schemi concettuali in schemi logici (ROLAP). È opportuno fare un ragionamento sul carico di lavoro e volume dati. Il carico di lavoro indica le query che più frequentemente verranno sottoposte al sistema. Per definizione il carico di lavoro OLAP è estemporaneo, ma il nucleo del carico di lavoro si può prevedere. La query OLAP standard ha una clausola di group-by, richiede una o più misure, e ha delle clausole di selezione. 
 
-Quindi durante questa fase inizio a organizzare tutte le query che ho catturato duramente l’analisi dei requisiti, verificano che siano supportati dagli schemi concettuali che ho disegnato e comincio a legarle agli utenti. Per gestire la variabilità del carico di lavoro bisogna fare un monitoraggio costante. Non tutte le query possono essere lanciate da tutti gli utenti, quindi si comincia con la profilazione, ovvero capire quali saranno i principali profili di utenti che dovranno accedere al data mart. Comincio con il legare quindi a ciascun utente dell’aree di analisi che potrebbero essere utili. Devo spiegare per tutti gli utenti di ciascun profilo quali query potranno formulare. In questa fase è importante anche cominciare a misurare il volume dati. Misurare il volume dati significa per ciascun attributo che si ha nella gerarchia capire qual è la sua cardinalità di dominio. 
+Quindi durante questa fase inizio a organizzare tutte le query che ho catturato nell'analisi dei requisiti, verificano che siano supportati dagli schemi concettuali che ho disegnato e comincio a legarle agli utenti. Per gestire la variabilità del carico di lavoro bisogna fare un monitoraggio costante. Non tutte le query possono essere lanciate da tutti gli utenti, quindi si comincia con la \textbf{profilazione}, ovvero capire quali saranno i principali profili di utenti che dovranno accedere al data mart. Comincio con il legare quindi a ciascun utente delle aree di analisi che potrebbero essere utili. Devo spiegare per tutti gli utenti di ciascun profilo quali query potranno formulare. In questa fase è importante anche cominciare a misurare il volume dati. Misurare il volume dati significa per ciascun attributo che si ha nella gerarchia capire qual è la sua cardinalità di dominio. 
 
 \end{itemize}
 
