@@ -39,3 +39,6 @@
 \contentsline {section}{\numberline {8}Progettazione Logica}{35}{}%
 \contentsline {subsection}{\numberline {8.1}Modelli logici per il data mart}{35}{}%
 \contentsline {subsection}{\numberline {8.2}Le viste}{36}{}%
+\contentsline {subsubsection}{\numberline {8.2.1}Schemi relazioniali e viste}{37}{}%
+\contentsline {subsection}{\numberline {8.3}Progettazione logica}{37}{}%
+\contentsline {subsection}{\numberline {8.4}Progettazione dell'ETL}{38}{}%
