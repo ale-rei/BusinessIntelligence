@@ -147,7 +147,63 @@ L’obiettivo di questa fase è capire come estrarre i dati dal DB sorgente, tra
 \end{itemize}
 Le fasi dell’ETL sono estrazione, trasformazione, pulizia e caricamento. Si ricorda che la differenza tra trasformazione e pulizia è che la prima si occupa del formato dei dati, mentre l'altra si occupa di aumentare la qualità del dato. Vi è un DB su cui ruotano le varie fasi che si chiama \textbf{staging area}, ovvero uno spazio utilizzato per memorizzare in via transitoria le informazioni necessarie all’esecuzione delle procedure.
 
-Esistono due modi per fare estrazione:
+Esistono due modi per fare \textbf{estrazione}:
 \begin{itemize}
-	contenuto...
+	\item 
+	\textbf{Statico}: prendo tutto quello che trovo nel DB sorgente
+	\item 
+	\textbf{Incrementale}: estraggo solo i dati che sono stati aggiunti o modificati nelle sorgenti dall’ultima volta che ho fatto estrazione. L’estrazione incrementale può essere immediata o ritardata. La prima significa che appena la modifica del dato viene registrata nel DB sorgente, in quel momento stesso, il dato viene notificato nella staging area. Nel secondo caso, invece è l’ETL che va a capire che cosa c’è da estrarre. 
 \end{itemize}
+Visto che l’estrazione ha a che fare con il tempo, inevitabilmente, bisogna fare i conti con il modo in cui nel DB sorgente questa componente viene gestita. Da questo punto di vista i DB possono essere di tre tipi:
+\begin{itemize}
+ \item 
+ \textbf{Transitori}: registro un dato e quando il dato viene modificato perdo la versione precedente e la sostituisco con quella nuova
+ \item 
+ \textbf{Storicizzate}: sono state progettate in modo da mantenere tutta la storia di tute le modifiche che sono state fatte
+ \item 
+ \textbf{Semi-storicizzata}: progettate in modo che mantengo una storia limitata nel numero di versioni
+\end{itemize}
+In figura \ref{fig:estrazione} è rappresentato lo schema con cui si ha a che fare, in cui troviamo il sistema operazionale, ovvero il software con la quale l’utente si interfaccia quando deve svolgere un’operazione. In mezzo, tra il sistema operazionale e i DB operazionale, troviamo il DBMS. L’utente parla con una logica applicativa, attraverso delle API, ovvero uno strato di software che fa da ponte tra la logica applicativa e il DBMS vero e proprio. Ci sono diversi modi per fare estrazione incrementale:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\linewidth]{img/estrazione}
+	\caption{Estrazione incrementale}
+	\label{fig:estrazione}
+\end{figure}
+\begin{itemize}
+	\item 
+	\textbf{Estrazione assistita dall’applicazione}: significa che in linea di principio dovrei mettere le mani sul sistema operazionale e aggiungere del codice, per fare in modo, che tutte le volte che in questo codice viene dato un comando per aggiornare un dato, venga anche lanciata una procedura che scrive sulla staging area. Il problema è che cambiare il codice per scrivere tutte le procedure ha un costo a meno che non vi sia uno strato di API, perché ho delle funzioni standard che gestiscono tutte le operazioni di inserimento, modifica e cancellazione, e dunque la procedura aggiuntiva la metto solo li e non nella logica applicativa. In pratica in molti casi non è utilizzabile. 
+	\item 
+	\textbf{Estrazione basata su log}: quando lancio l’ETL, questo si prende il log, isola la porzione di log che è stata scritta nell’ultima settimana e va a ricostruire tutto quello che il DBMS ha fatto. Il problema è che l’interpretazione del log è complicatissima. Per fortuna in alcuni il DBMS da dei componenti per interpretare il log.
+	\item 
+	\textbf{Estrazione basata su trigger}: sono delle procedure che si possono scrivere sul DBMS abbinato su un DB. Ad esempio, alla tabella studenti, abbino un trigger che esegue una procedura ogni qual volta un record viene modificato. Dentro la procedura scrivo il codice che notifica la variazione alla staging area. Il bello è che i trigger li gestisce il DBMS, non interferendo con la logica applicativa. È una tecnica immediata, ma per riuscire a cogliere tutte le modifiche che faccio sul DB di trigger ne servono centinaia. Il problema vero a questo punto è di prestazione, perché il DBMS a ogni singola operazione deve controllare se può lanciare qualcuno di questi trigger.
+	\item 
+	\textbf{Estrazione basata su marche temporali}: un attributo i cui valori sono del tipo data, ora, minuto, secondo, millisecondo. L’idea è che se nel DB in ogni tabella ho già un attributo che mi dice quando quella riga di quella tabella è stata modificata l’ultima volta fare estrazione incrementale diventa molto semplice. Con questa tecnica potrei perdermi delle modifiche, perché se il DB sorgente è storicizzato, estraggo tutto quello che mi serve. Ma se il DB o anche la singola tabella è transitorio o semi-storicizzati si possono perdere delle modifiche. 
+\end{itemize}
+
+Qualunque sia la tecnica di estrazione incrementale, il risultato che si scrive nella staging area sono tutti i dati modificati, aggiunti o cancellati rispetto allo scorso ETL. Creo una nuova tabella in cui registro tutti i record alterati scrivendo accanto che tipo di operazione è stata fatta. \\
+\newline
+\textbf{Caricamento dei dati}
+
+Quello che si fa in termini di caricamento riflette quello che si è fatto nell’estrazione dei dati. Se ho fatto un’estrazione statica normalmente si fa una riscrittura completa. Se invece ho fatto un’estrazione incrementale, devo aggiungere le variazioni all’ODS, tenendo conto del tipo di operazione che ho eseguito. Devo anche considerare che livello di storicizzazione uso nell’ODS. \\
+\newline
+\textbf{Trasformazione e pulizia}
+
+Ci sono diversi motivi per cui sono obbligato a pulire o a trasformare il dato. È chiaro che se si potesse avere una prevenzione degli errori, con controlli dell’input molto stretti, la maggior parte degli errori non ci sarebbero. Si possono utilizzare diverse tecniche:
+\begin{itemize}
+	\item 
+	\textbf{Basate su dizionari}: si utilizzano quando bisogna standardizzare o pulire dati che hanno un riferimento noto
+	\item 
+	\textbf{Business rules}: sono regole esprimibili attraverso equazioni che devono essere sempre verificate dai dati che caricano  
+	\item 
+	Fusione approssimata: riuscire a stabilire delle corrispondenze tra righe della stessa tabella in assenza di chiavi. Questa tecnica ha due sfaccettature: join approssimati e purge/merge
+\end{itemize}
+Come misuro la similarità tra due record? Per esempio, ho due indirizzi o due cognomi, dunque in entrambi i casi ho due stringhe da confrontare. Quello che si fa, di solito, per ogni singola parola di ciascuna stringa è trovare il match migliore con l’altra stringa. Dopodiché uso la edit distance, ovvero il numero di caratteri che devo modificare nell’una per ottenere l’altra. 
+
+Altro problema sono le abbreviazioni, perché riuscire a trovare tutte queste possibilità è relativamente complesso. Infine, posso scrivermi delle regole per euristicamente stimare la similarità tra due record. 
+
+A questo punto siamo riusciti a caricare i dati nell’ODS e quindi adesso bisogna aggiornare il data mart, aggiornando DT, FT e viste. Prendo le righe modificate dallo scorso ETL, faccio i join che mi servono e preparo la tupla quasi pronta per la DT. Resta solo un problema, l’ID perché l’ID del prodotto che ho li non è lo stesso ID presente nel data mart, perché nel data mart uso le chiavi surrogate. Quindi devo fare una sostituzione di chiavi attraverso tabelle di look-up dove si mantengono le corrispondenze tra le due chiavi. Adesso ho pronto la nuova riga pronta per il caricamento nel DT. Sono pronto per aggiornare le FT. Anche qui nel DB sorgente ho le nuove righe, estraggo le righe modificate dall’ETL, faccio sempre i join, group-by, e ho la tupla pronta per essere inserita nella FT, salvo per le chiavi, in cui uso le tabelle di look-up. 
+
+Per rinfrescare le viste materializzate rilancerò tutte le query.
+
+
